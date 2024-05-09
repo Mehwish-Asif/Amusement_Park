@@ -1,0 +1,351 @@
+*{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    box-sizing: border-box;
+    /* font-family:'Poppins',sans-serif; */
+}
+:root{
+    --black-color:#1b1b1b;
+    --white-color:#fff;
+    --yellow-color:#ffc222;
+    --green:#00AB66;
+    --red :indianred;
+    --grey-color:#b0b0b0;
+}
+.main{
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px -60px #000;
+}
+.modal-content1{
+    display: flex;
+    
+}
+
+nav{
+    background:black;
+}
+nav:after{
+    content: '';
+    clear:both;
+    display: table;
+}
+nav .logo
+    {
+       text-transform: uppercase;
+       background-image: linear-gradient(
+         -225deg,
+         #10f856 0%,
+         #44107a 29%,
+         #ff1361 67%,
+         #fff800 100%
+         
+       );
+       background-size: auto auto;
+       background-clip: border-box;
+       background-size: 200% auto;
+       color: #fff;
+       background-clip: text;
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       animation: textclip 2s linear infinite;
+       display: inline-block;
+       float:left;
+       font-size: 30px;
+       line-height: 70px;
+       padding-left: 40px;
+       padding-top: 15px;
+
+
+     }
+     
+     @keyframes textclip {
+       to {
+         background-position: 200% center;
+       }
+     }
+
+nav ul{
+    float:right;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
+}
+nav ul li{
+    float:left;
+    display:inline-block;
+    background:black;
+    margin: 0 5px;
+    padding-top:20px;
+}
+nav ul li a{
+    color:#ff1361;
+    line-height: 60px;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 10px;
+    transition: 0.3s all ease;
+}
+nav ul li a:hover{
+    border-radius:4px;
+    box-shadow: 0 0 14px #ff1361, 0 0 14px;
+    color:#ff1361;
+}
+nav ul ul li a:hover{ 
+    box-shadow: none;
+} 
+nav ul ul{
+    position: absolute;
+    top: 90px;
+    z-index: 100;
+    border-top: 3px solId var(--red);
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+nav ul ul ul{
+    border-top: none;
+}
+nav ul li:hover > ul{
+    top:70px;
+    opacity: 1;
+    visibility: visible;
+}
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width:150px;
+    float:none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0,0,0,0,3);
+}
+nav ul ul ul li{
+    position: relative;
+    top:-60px;
+    left:150px;
+}
+.show,.icon,input{
+    display: none;
+}
+.fa-plus{
+    font-size: 15px;
+    margin-left: 40px;
+}
+@media all and (max-width:968px){
+    nav ul{
+        margin-right:0px;
+        float: right;
+    }
+    nav .logo{
+        padding-left: 30px;
+        width:100%;
+    }
+    .show + a,ul{
+        display: none;
+    }
+    nav ul li,nav ul ul li{
+        display: block;
+        width: 100%;
+    }
+    nav ul li a:hover{
+        box-shadow: none;
+    }
+    .show{
+        display: block;
+        color:#ff1361;
+        font-size: 18px;
+        padding:0 12;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .show:hover{
+        color:#ff1361;
+    }
+    .icon{
+        display: var(--red);
+        color: var(--red);
+        position: absolute;
+        top: 60px;
+        right:49px;
+        line-height: 70px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+    nav ul ul{
+        top:70px;
+        border-top: 0px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul ul a{
+        padding-left: 40px;
+    }
+    nav ul ul ul li{
+        position: static;
+    }
+    [id^=btn]:checked + ul{
+        display: block;
+    }
+    nav ul ul li{
+        border-bottom: 0px;
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+/* ...navigation end... */
+
+/* ...ticket package start... */
+.ticket-h{
+        
+        /* background-color:#ee4e5be3;     */
+        background-color:#f06060;    
+
+
+    text-align: center;
+    justify-content: center;
+    height: 100px;
+    padding: 20px 20px;
+    color: #fff;
+    font-size: 30px;
+    font-family: cursive;
+}
+.ticket-h2{
+    font-size: 35px;
+    padding: 50px 140px;
+    color: var(--green);
+    font-family:cursive;
+}
+.th{
+    text-align:left;
+    padding-left: 90px;
+}
+.tr{
+    line-height: 50px;
+    font-size: 30px;
+}
+.tr-1{
+    font-size: 20px;
+}
+
+.table-1{
+
+    height:230px;
+    width:50%;
+    max-width: 720px;
+    margin: 10px auto;
+    box-shadow: 0px 4px 20px rgba(5,57,94,5);
+    -moz-box-shadow:0px 4px 20px rgba(5,57,94,5);
+    -webkit-box-shadow:0px 4px 20px rgba(5,57,94,5);
+}
+
+.table-2{
+
+    height:190px;
+    width:50%;
+    max-width: 720px;
+    margin: 10px auto;
+    box-shadow: 0px 4px 20px rgba(5,57,94,5);
+    -moz-box-shadow:0px 4px 20px rgba(5,57,94,5);
+    -webkit-box-shadow:0px 4px 20px rgba(5,57,94,5);
+}
+/* ...ticket packages end... */
+
+/* ...footer section start... */
+.footer-area{
+    margin-top: 100px;
+    padding:50px 0px;
+    color: #fff; 
+    background: #e73c3c;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.main{
+    width:1200px;
+    margin:0 auto;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.single-footer{
+    width:230px;
+}
+
+.single-footer:first-child{
+    width:400px;
+}
+.single-footer h4{
+    text-transform: capitalize;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.footer-social{
+    margin-top: 20px;
+}
+.footer-social a{
+    color:#fff;
+    border: 1px solid #fff;
+    width:40px;
+    height:40px;
+    display:inline-block;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.footer-social a:hover{
+    color:#fff;
+}
+
+.single-footer ul{
+    list-style: none;
+    padding-left: 5px;
+}
+.single-footer ul li{
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 10px;
+}
+.single-footer ul li a{
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration:none;
+}
+.single-footer ul li a i{
+    position: absolute;
+    left: 0;
+    top:5px;
+}
+.copy{
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width:768px){
+    .main{
+        width:320px;
+    }
+    .single-footer:first-child, .single-footer{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+}
+/* footer section end */
